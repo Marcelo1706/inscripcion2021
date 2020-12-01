@@ -16,7 +16,7 @@ require 'config/baseDatos.php';
 
 $valid = 0;
 if(isset($_GET["type"])){
-    if(base64_decode($_GET["type"]) == "nuevo" || base64_decode($_GET["type"]) == "antiguo")
+    if(base64_decode($_GET["type"]) == "nuevo" || base64_decode($_GET["type"]) == "antiguo" || base64_decode($_GET["type"]) == "nocturna")
         $valid = 1;
 }else{
     $valid = 0;
@@ -200,7 +200,7 @@ function send_mail($correo){
     // $mail->Encoding = 'base64';
     $clave_generada = generar_clave();
     $cuerpo = '<p><b>Complejo Educativo "Profesor Martin Romeo Monterrosa Rodriguez"</b></p><br><p>Se ha registrado correctamente en la plataforma de inscripcion. Sus datos de inicio de sesion son los siguientes: </p><br>
-    <p><b>Correo Electronico: </b>'.$correo.'</p><p><b>Clave: </b>'.$clave_generada.'</p><br><p>Puede iniciar sesion en la plataforma en la siguiente direccion: <a href="https://www.inscripcionmonterrosa.info/login">https://www.inscripcionmonterrosa.info/login?type=YW50aWd1bw==</a></p>';
+    <p><b>Correo Electronico: </b>'.$correo.'</p><p><b>Clave: </b>'.$clave_generada.'</p><br><p>NOTA: Todas las letras de la contraseña son MINÚSCULAS</p><br><p>Puede iniciar sesion en la plataforma en la siguiente direccion: <a href="https://www.inscripcionmonterrosa.info/login">https://www.inscripcionmonterrosa.info/login?type=YW50aWd1bw==</a></p>';
     try {
         $mail->SMTPOptions = array(
             'ssl' => array(
@@ -235,8 +235,10 @@ function send_mail($correo){
             $type = base64_decode($_GET["type"]);
             if($type == "nuevo"){
                 $type = 1;
-            }else{
+            }elseif($type == "antiguo"){
                 $type = 2;
+            }else{
+                $type = 3;
             }
             $res = $objBD->insertar("usuarios",["correo" => $correo, "password" => md5($clave_generada), "type" => $type]);
             echo gettype($res);
@@ -271,7 +273,7 @@ function send_mail($correo){
 }
 
 function generar_clave(){
-    $alphabet = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789";
+    $alphabet = "abcdefghijklmnopqrstuwxyz0123456789";
     $pass = array(); //remember to declare $pass as an array
     $alphaLength = strlen($alphabet) - 1; //put the length -1 in cache
     for ($i = 0; $i < 8; $i++) {

@@ -31,22 +31,10 @@ if(count($procesos) > 0 ){
                 switch($p["estado"]){
                     case 0: 
                         $estado = "Incompleta";
-                        $acciones = '<a class="button is-primary" href="https://www.inscripcionmonterrosa.info/antiguoingreso/aplicar?paso='.($p["step"]+1).'&type=2&idProceso='.($p["id"]).'&idEstudiante='.($p["idEstudiante"]).'">Continuar</a>';
+                        $acciones = '<a class="button is-primary" href="https://www.inscripcionmonterrosa.info/nocturna/aplicar?paso='.($p["step"]+1).'&type=3&idProceso='.($p["id"]).'&idEstudiante='.($p["idEstudiante"]).'">Continuar</a>';
                     break;
                     case 2: 
                         $estado = "En revisión";
-                        $acciones = "";
-                    break;
-                    case 3: 
-                        $estado = "Con Observaciones";
-                        $acciones = "";
-                    break;
-                    case 4: 
-                        $estado = "Aceptada";
-                        $acciones = "";
-                    break;
-                    case 5: 
-                        $estado = "No admitida";
                         $acciones = "";
                     break;
                 }

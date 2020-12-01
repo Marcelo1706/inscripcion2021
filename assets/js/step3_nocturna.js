@@ -1,7 +1,7 @@
 $(document).ready(function(_e){
     $("#side-panel").hide();
     $.ajax({
-        url: "/ajax/gradoSuperior",
+        url: "/ajax/gradoSuperior_nocturna",
         type: "POST",
         success: function(response){
             if(response != "no_grade"){
@@ -35,7 +35,6 @@ $(document).on("change",".disp",function(){
 
 $(document).on("submit","#step3form",function(e){
     e.preventDefault();
-    $("#step3form :input").prop("disabled",false);
     var data = $(this).serializeArray();
     $("#step3form :input").prop("disabled",true);
     $("#send").addClass("is-loading");

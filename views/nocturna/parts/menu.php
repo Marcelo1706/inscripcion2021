@@ -1,14 +1,16 @@
 <?php 
 if(isset($_SESSION["type"])){
     if($_SESSION["type"] == 1)
-        header("location: https://www.inscripcionmonterrosa.info/nuevoingreso-dev/panel");    
+        header("location: https://www.inscripcionmonterrosa.info/nuevoingreso/panel");
+    elseif($_SESSION["type"] == 2)
+        header("location: https://www.inscripcionmonterrosa.info/antiguoingreso/panel");
 }else{
     header("location: https://www.inscripcionmonterrosa.info");
 }
 ?>
 <nav class="navbar is-info  is-fixed-top">
     <div class="navbar-brand">
-        <a class="navbar-item" href="https://www.inscripcionmonterrosa.info/nuevoingreso-dev/panel">
+        <a class="navbar-item" href="https://www.inscripcionmonterrosa.info/nuevoingreso/panel">
             <img src="https://www.inscripcionmonterrosa.info/assets/images/logo_escuela.png" width="28" height="28">
         </a>
         <div class="navbar-burger burger" data-target="navbarPanel">
@@ -20,7 +22,7 @@ if(isset($_SESSION["type"])){
 
     <div id="navbarPanel" class="navbar-menu">
         <div class="navbar-start">
-            <a class="navbar-item" href="https://www.inscripcionmonterrosa.info/nuevoingreso-dev/panel">
+            <a class="navbar-item" href="https://www.inscripcionmonterrosa.info/antiguoingreso/panel">
                 <b>Complejo Educativo "Profesor Martín Romeo Monterrosa Rodríguez"</b>
             </a>
 
@@ -42,7 +44,7 @@ if(isset($_SESSION["type"])){
         </div>
     </div>
 </nav>
-<h1 class="title is-size-3 has-text-weight-bold has-text-centered"><br><br>Proceso de Inscripción 2021 - Antiguo Ingreso
+<h1 class="title is-size-3 has-text-weight-bold has-text-centered"><br><br>Proceso de Inscripción 2021 - Educación Nocturna
 </h1>
 <div class="wrapper">
     <div class="columns">

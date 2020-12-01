@@ -42,12 +42,12 @@
                             </ul>
                         </div>
                         <p class="buttons is-centered">
-                            <a href="https://www.inscripcionmonterrosa.info/registro?type=YW50aWd1bw==" class="button is-success is-large">
+                            <!-- <a href="https://www.inscripcionmonterrosa.info/registro?type=YW50aWd1bw==" class="button is-success is-large">
                                 <span class="icon is-medium">
                                     <i class="fas fa-user-plus"></i>
                                 </span>
                                 <span>Registrarse</span>
-                            </a>
+                            </a> -->
                             <a href="https://www.inscripcionmonterrosa.info/login?type=YW50aWd1bw==" class="button is-info is-large">
                                 <span class="icon is-medium">
                                     <i class="fas fa-sign-in-alt"></i>

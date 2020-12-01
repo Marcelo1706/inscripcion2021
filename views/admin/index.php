@@ -1,13 +1,4 @@
-<?php
-if(isset($_SESSION["type"])){
-    if($_SESSION["type"] == 1)
-        header("location: https://www.inscripcionmonterrosa.info/nuevoingreso/panel");
-    else
-        header("location: https://www.inscripcionmonterrosa.info/antiguoingreso/panel");
-}
-require 'config/baseDatos.php';
-
-?>
+<?php require 'config/baseDatos.php';?>
 <section class="hero is-info is-fullheight">
     <div class="hero-body">
         <div class="container">
@@ -37,28 +28,13 @@ require 'config/baseDatos.php';
                         <p class="has-text-centered is-size-5 has-text-dark has-text-weight-bold">Inicio de Sesión</p>
                         <?php
                         if(isset($_POST["enviar"])){
-                            if($_POST["mail"] != "" && $_POST["pass"] != ""){
+                            if($_POST["usuario"] != "" && $_POST["pass"] != ""){
                                 $objBD = new baseDatos();
-                                $registro = $objBD->leer("usuarios","id,correo,password,type",["correo" => $_POST["mail"]]);
+                                $registro = $objBD->leer("admin","usuario,password",["usuario" => $_POST["usuario"]]);
                                 if(count($registro) > 0){
                                     if(md5($_POST["pass"]) == $registro[0]["password"]){
-                                        $type = $registro[0]["type"];
-                                        if($type == "1"){
-                                            $_SESSION["type"] = 1;
-                                            $_SESSION["usuario"] = $registro[0]["id"];
-                                            $_SESSION["correo"] = $_POST["mail"];
-                                            header("location: https://www.inscripcionmonterrosa.info/nuevoingreso/panel");
-                                        }elseif($type == "2"){
-                                            $_SESSION["type"] = 2;
-                                            $_SESSION["usuario"] = $registro[0]["id"];
-                                            $_SESSION["correo"] = $_POST["mail"];
-                                            header("location: https://www.inscripcionmonterrosa.info/antiguoingreso/panel");
-                                        }else{
-                                            $_SESSION["type"] = 3;
-                                            $_SESSION["usuario"] = $registro[0]["id"];
-                                            $_SESSION["correo"] = $_POST["mail"];
-                                            header("location: https://www.inscripcionmonterrosa.info/nocturna/panel");
-                                        }
+                                        $_SESSION["usuario"] = $_POST["usuario"];
+                                        $_SESSION["es_admin"] = 1;
                                     }else{
                                         ?>
                                         <div class="message is-danger">
@@ -84,12 +60,12 @@ require 'config/baseDatos.php';
                             <div class="column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop">
                                 <form action="" method="post" id="frm_login">
                                     <div class="field">
-                                        <label class="label">Correo Electrónico</label>
+                                        <label class="label">Usuario</label>
                                         <div class="control has-icons-left has-icons-right">
-                                            <input class="input" type="email" placeholder="Correo Electrónico"
-                                                name="mail" required>
+                                            <input class="input" type="text" placeholder="Usuario"
+                                                name="usuario" required>
                                             <span class="icon is-small is-left">
-                                                <i class="fas fa-envelope"></i>
+                                                <i class="fas fa-user"></i>
                                             </span>
                                         </div>
                                     </div>

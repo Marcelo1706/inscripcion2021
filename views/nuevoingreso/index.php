@@ -35,10 +35,23 @@
                                         <li>Bachillerato Técnico Vocacional en Patrimonio Cultural. </li>
                                     </ul>
                                 </li>
-                                <li>Los estudiantes que van para Parvularia 5 años, deberán incluir además <b>una partida de nacimiento original y reciente.</b> (En el caso del formulario en línea, se puede adjuntar una foto o escaneo, posteriormente se deberá presentar en físico).</li>
                                 <li>Para Parvularia 5 años, el estudiante debe tener <b>5 años cumplidos, y vivir en un lugar cercano a la institución.</b></li>
                             </ul>
                         </div>
+                        <p class="buttons is-centered">
+                            <!-- <a href="https://www.inscripcionmonterrosa.info/registro?type=bnVldm8=" class="button is-success is-large">
+                                <span class="icon is-medium">
+                                    <i class="fas fa-user-plus"></i>
+                                </span>
+                                <span>Registrarse</span>
+                            </a> -->
+                            <a href="https://www.inscripcionmonterrosa.info/login?type=bnVldm8=" class="button is-info is-large">
+                                <span class="icon is-medium">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                </span>
+                                <span>Iniciar Sesión</span>
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>

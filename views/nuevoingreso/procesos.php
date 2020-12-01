@@ -14,6 +14,7 @@ if($_SESSION["type"] == 1){
 
 $procesos = $objBD->consulta_personalizada("SELECT proceso_inscripcion.id, estudiantes_".$tipo.".nie, CONCAT(estudiantes_".$tipo.".pnombre,' ',estudiantes_".$tipo.".snombre,' ',estudiantes_".$tipo.".papellido,' ',estudiantes_".$tipo.".sapellido) as 'estudiante', proceso_inscripcion.idEstudiante, proceso_inscripcion.estado, proceso_inscripcion.step FROM proceso_inscripcion INNER JOIN estudiantes_".$tipo." ON proceso_inscripcion.idEstudiante = estudiantes_".$tipo.".idEstudiante WHERE proceso_inscripcion.idUsuario = ".$_SESSION["usuario"]);
 
+
 if(count($procesos) > 0 ){
     ?>
     <table class="table is-bordered is-hoverable is-fullwidth">
@@ -31,22 +32,10 @@ if(count($procesos) > 0 ){
                 switch($p["estado"]){
                     case 0: 
                         $estado = "Incompleta";
-                        $acciones = '<a class="button is-primary" href="https://www.inscripcionmonterrosa.info/antiguoingreso/aplicar?paso='.($p["step"]+1).'&type=2&idProceso='.($p["id"]).'&idEstudiante='.($p["idEstudiante"]).'">Continuar</a>';
+                        $acciones = '<a class="button is-primary" href="https://www.inscripcionmonterrosa.info/nuevoingreso/aplicar?paso='.($p["step"]+1).'&type=1&idProceso='.($p["id"]).'&idEstudiante='.($p["idEstudiante"]).'">Continuar</a>';
                     break;
                     case 2: 
                         $estado = "En revisión";
-                        $acciones = "";
-                    break;
-                    case 3: 
-                        $estado = "Con Observaciones";
-                        $acciones = "";
-                    break;
-                    case 4: 
-                        $estado = "Aceptada";
-                        $acciones = "";
-                    break;
-                    case 5: 
-                        $estado = "No admitida";
                         $acciones = "";
                     break;
                 }

@@ -2,7 +2,7 @@
     <div class="hero-body">
         <div class="container has-text-centered">
             <h1 class="title">
-                Iniciar Proceso de Aplicación 2021 - Antiguo Ingreso 
+                Iniciar Proceso de Aplicación 2021 - Nuevo Ingreso
             </h1>
             <div class="content has-text-justified is-size-5">
                 <p>Antes de Iniciar el proceso de aplicación, deberá tener a la mano los siguientes datos: </p>

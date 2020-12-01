@@ -1,13 +1,4 @@
-<?php 
-@session_start();
-if(isset($_GET["repitente"])){
-    require 'config/baseDatos.php';
-    $objBD = new baseDatos();
-    $actualizar_repitente = $objBD->actualizar("usuarios",["procesoRepetidor" => 1],["id" => $_SESSION["usuario"]]);
-    if($actualizar_repitente != 0){
-        var_dump($actualizar_repitente);
-    }
-}
+<?php
 $activo = 0;
 
 if($activo == 1){

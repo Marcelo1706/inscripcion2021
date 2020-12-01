@@ -12,10 +12,17 @@ if($_SESSION["type"] == 1){
     $tipo = "nocturna";
 }
 
-if($tipo == "nuevo"){
-
-}else{
-    $idEstudiante = $objBD->leer("estudiantes_".$tipo,"idEstudiante",["nie" => $_POST["nie"]])[0]["idEstudiante"];
+$ins_est = $objBD->insertar("estudiantes_".$tipo,[
+    "nie" => $_POST["nie"],
+    "pnombre" => $_POST["pnombre"],
+    "snombre" => $_POST["snombre"],
+    "papellido" => $_POST["papellido"],
+    "sapellido" => $_POST["sapellido"],
+    "inscrito" => 0,
+    "grado" => 0
+]);
+if($ins_est > 0){
+    $idEstudiante = $objBD->dbh->lastInsertId();
     $_SESSION["idEstudiante"] = $idEstudiante;
     $proceso = $objBD->insertar("proceso_inscripcion",["idUsuario" => $idUsuario, "step" => 1, "estado" => 0, "tipo" => $tipo, "idEstudiante" => $idEstudiante]);
     $lid = $objBD->dbh->lastInsertId();

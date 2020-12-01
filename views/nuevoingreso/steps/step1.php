@@ -8,8 +8,9 @@
                     <div class="control is-fullwidth">
                         <input id="nie" name="nie" class="input" type="text" placeholder="NIE" maxlength="8">
                     </div>
-                    <p class="control">
-                        <button type="button" class="button is-info" id="buscar-nie">Buscar</button>
+                    <p class="control buttons">
+                        <button type="button" class="button is-info" id="buscar-nie">Continuar</button>
+                        <button type="button" class="button is-primary" id="no-nie">No tengo NIE</button>
                     </p>
                 </div>
             </div>
@@ -19,6 +20,13 @@
             <div class="message is-danger">
                 <div class="message-body">
                     <p id="error-text"></p>
+                </div>
+            </div>
+        </div>
+        <div id="mensaje-warning" class="is-hidden">
+            <div class="message is-warning">
+                <div class="message-body">
+                    <p id="error-text">Estudiante no encontrado, se procederá a crear uno nuevo</p>
                 </div>
             </div>
         </div>
@@ -165,5 +173,5 @@
             </div>
         </div>
     </form>
-    <script src="/assets/js/step1.js"></script>
+    <script src="/assets/js/step1_nuevos.js"></script>
 </div>

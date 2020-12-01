@@ -44,11 +44,31 @@
                                     inscripción. </li>
                             </ul>
                         </div>
+                        <div class="columns">
+                            <div class="column is-12">
+                                <a href="https://www.inscripcionmonterrosa.info/resultados/">
+                                    <div class="notification is-info">
+                                        <div class="columns is-centered is-mobile is-vcentered">
+                                            <div class="column is-3">
+                                                <figure class="image is-128x128">
+                                                    <img src="assets/images/comprobado.png" alt="Resultados">
+                                                </figure>
+                                            </div>
+                                            <div class="column is-9">
+                                                <p class="title has-text-centered">
+                                                    Resultados de Inscripción
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                         <div>
                             <div class="divider is-info">Proceso de aplicación en línea</div>
                         </div>
                         <div class="columns is-centered is-vcentered">
-                            <div class="column is-6">
+                            <div class="column is-4">
                                 <a href="https://www.inscripcionmonterrosa.info/antiguoingreso/">
                                     <div class="notification is-link">
                                         <div class="columns is-centered is-mobile">
@@ -67,7 +87,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="column is-6">
+                            <div class="column is-4">
                                 <a href="https://www.inscripcionmonterrosa.info/nuevoingreso/">
                                     <div class="notification is-primary">
                                         <div class="columns is-centered is-mobile">
@@ -81,32 +101,74 @@
                                         </div>
                                         <p class="title has-text-centered">
                                             Estudiantes<br>
-                                            Nuevo Ingreso
+                                            Nuevo<br> Ingreso
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="column is-4">
+                                <a href="https://www.inscripcionmonterrosa.info/nocturna/">
+                                    <div class="notification is-danger">
+                                        <div class="columns is-centered is-mobile">
+                                            <div class="column"></div>
+                                            <div class="column">
+                                                <figure class="image is-128x128">
+                                                    <img src="assets/images/night.png" alt="Nocturna">
+                                                </figure>
+                                            </div>
+                                            <div class="column"></div>
+                                        </div>
+                                        <p class="title has-text-centered">
+                                            Estudiantes<br>
+                                            Educación Nocturna
                                         </p>
                                     </div>
                                 </a>
                             </div>
                         </div>
                         <div>
-                            <div class="divider is-info">Si no quieres aplicar en línea</div>
+                            <div class="divider is-info is-hidden">Si no quieres aplicar en línea</div>
                         </div>
-                        <a href="https://www.inscripcionmonterrosa.info/impreso/">
-                            <div class="notification is-info">
-                                <div class="columns is-mobile is-vcentered">
-                                    <div class="column is-4">
-                                        <figure class="image is-128x128">
-                                            <img src="assets/images/file.png" alt="Descargar Hoja">
-                                        </figure>
+                        <div class="columns is-hidden">
+                            <div class="column">
+                                <a href="https://www.inscripcionmonterrosa.info/impreso/">
+                                    <div class="notification is-info">
+                                        <div class="columns is-mobile is-vcentered">
+                                            <div class="column is-4">
+                                                <figure class="image is-128x128">
+                                                    <img src="assets/images/file.png" alt="Descargar Hoja">
+                                                </figure>
+                                            </div>
+                                            <div class="column is-8">
+                                                <p class="title has-text-centered">
+                                                    Hoja de Inscripción<br>
+                                                    Matutino y Vespertino
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="column is-8">
-                                        <p class="title has-text-centered">
-                                            Descargar Hoja de Inscripción<br>
-                                            En formato PDF
-                                        </p>
-                                    </div>
-                                </div>
+                                </a>
                             </div>
-                        </a>
+                            <div class="column">
+                                <a href="https://www.inscripcionmonterrosa.info/impreso_nocturna/">
+                                    <div class="notification is-success">
+                                        <div class="columns is-mobile is-vcentered">
+                                            <div class="column is-4">
+                                                <figure class="image is-128x128">
+                                                    <img src="assets/images/file.png" alt="Descargar Hoja">
+                                                </figure>
+                                            </div>
+                                            <div class="column is-8">
+                                                <p class="title has-text-centered">
+                                                    Hoja de Inscripción<br>
+                                                    Educación Nocturna
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

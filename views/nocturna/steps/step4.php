@@ -1,3 +1,15 @@
+<?php 
+@session_start();
+if(isset($_GET["type"])){
+    $_SESSION["type"] = $_GET["type"];
+}
+if(isset($_GET["idProceso"])){
+    $_SESSION["idProceso"] = $_GET["idProceso"];
+}
+if(isset($_GET["idEstudiante"])){
+    $_SESSION["idEstudiante"] = $_GET["idEstudiante"];
+}
+?>
 <form action="" method="post" id="step4form">
     <div class="column is-12 is-offset-2 box">
         <h1 class="title is-size-4 has-text-weight-bold">5. Aspectos Generales</h1>

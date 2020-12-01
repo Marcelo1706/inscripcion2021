@@ -1,16 +1,5 @@
 $(document).ready(function(_e){
     $("#side-panel").hide();
-    $.ajax({
-        url: "/ajax/gradoSuperior",
-        type: "POST",
-        success: function(response){
-            if(response != "no_grade"){
-                $("#grado_matricular").html(response)
-            }else{
-                alert("Este alumno no se puede matricular en otro grado.")
-            }
-        }
-    })
 });
 
 $(document).on("change",".plat_edu",function(){
@@ -35,7 +24,6 @@ $(document).on("change",".disp",function(){
 
 $(document).on("submit","#step3form",function(e){
     e.preventDefault();
-    $("#step3form :input").prop("disabled",false);
     var data = $(this).serializeArray();
     $("#step3form :input").prop("disabled",true);
     $("#send").addClass("is-loading");

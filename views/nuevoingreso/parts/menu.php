@@ -1,43 +1,13 @@
 <?php 
 if(isset($_SESSION["type"])){
-    if($_SESSION["type"] == 1)
-        header("location: https://www.inscripcionmonterrosa.info/nuevoingreso/panel");  
+    if($_SESSION["type"] == 2)
+        header("location: https://www.inscripcionmonterrosa.info/antiguoingreso/panel");
     elseif($_SESSION["type"] == 3)
-        header("location: https://www.inscripcionmonterrosa.info/nocturna/panel");  
+        header("location: https://www.inscripcionmonterrosa.info/nocturna/panel");
 }else{
     header("location: https://www.inscripcionmonterrosa.info");
 }
 ?>
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Nov 16, 2020 23:00:00").getTime();
-
-// Update the count down every 1 second
-// var x = setInterval(function() {
-
-//   // Get today's date and time
-//   var now = new Date().getTime();
-
-//   // Find the distance between now and the count down date
-//   var distance = countDownDate - now;
-
-//   // Time calculations for days, hours, minutes and seconds
-//   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-//   // Display the result in the element with id="demo"
-//   //document.getElementById("demo").innerHTML = hours + ":"
-//   + minutes + ":" + seconds + "";
-
-//   // If the count down is finished, write some text
-//   if (distance < 0) {
-//     clearInterval(x);
-//     //document.getElementById("demo").innerHTML = "EXPIRED";
-//   }
-// }, 1000);
-</script>
 <nav class="navbar is-info  is-fixed-top">
     <div class="navbar-brand">
         <a class="navbar-item" href="https://www.inscripcionmonterrosa.info/nuevoingreso/panel">
@@ -52,7 +22,7 @@ var countDownDate = new Date("Nov 16, 2020 23:00:00").getTime();
 
     <div id="navbarPanel" class="navbar-menu">
         <div class="navbar-start">
-            <a class="navbar-item" href="https://www.inscripcionmonterrosa.info/antiguoingreso/panel">
+            <a class="navbar-item" href="https://www.inscripcionmonterrosa.info/nuevoingreso/panel">
                 <b>Complejo Educativo "Profesor Martín Romeo Monterrosa Rodríguez"</b>
             </a>
 
@@ -74,7 +44,7 @@ var countDownDate = new Date("Nov 16, 2020 23:00:00").getTime();
         </div>
     </div>
 </nav>
-<h1 class="title is-size-3 has-text-weight-bold has-text-centered"><br><br>Proceso de Inscripción 2021 - Antiguo Ingreso
+<h1 class="title is-size-3 has-text-weight-bold has-text-centered"><br><br>Proceso de Inscripción 2021 - Nuevo Ingreso
 </h1>
 <div class="wrapper">
     <div class="columns">
@@ -98,18 +68,6 @@ var countDownDate = new Date("Nov 16, 2020 23:00:00").getTime();
                         <i class="fas fa-list-ul" aria-hidden="true"></i>
                     </span>
                     Mis Procesos
-                </a>
-                <a href="estudiante_repitente" class="panel-block is-hidden <?= $active == 5 ? 'is-active' : '' ?>">
-                    <span class="panel-icon">
-                        <i class="fas fa-sync-alt" aria-hidden="true"></i>
-                    </span>
-                    Estudiantes Repitentes
-                </a>
-                <a href="cambio_turno" class="panel-block <?= $active == 6 ? 'is-active' : '' ?>">
-                    <span class="panel-icon">
-                        <i class="fas fa-exchange-alt" aria-hidden="true"></i>
-                    </span>
-                    Cambio de Turno
                 </a>
                 <a href="faq" class="panel-block <?= $active == 4 ? 'is-active' : '' ?>">
                     <span class="panel-icon">
